@@ -131,3 +131,6 @@ dist
 
 # whatsapp-web.js
 .wwebjs_*
+
+# VSCode
+.vscode

@@ -17,7 +17,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-	message.reply(message.body);
+	message.reply("Ok");
 });
 
 client.initialize();
