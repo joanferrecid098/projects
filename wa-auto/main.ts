@@ -6,7 +6,13 @@ require('dotenv').config()
 const client = new Client({
     authStrategy: process.env.LOCAL_AUTH ? new LocalAuth() : new NoAuth(),
     puppeteer: { 
-        headless: true
+        headless: true,
+        args: [
+        "--disable-gpu",
+        "--disable-dev-shm-usage",
+        "--disable-setuid-sandbox",
+        "--no-sandbox",
+        ]
     }
 });
 
