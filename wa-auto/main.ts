@@ -6,7 +6,6 @@ require('dotenv').config()
 const client = new Client({
     authStrategy: process.env.LOCAL_AUTH ? new LocalAuth() : new NoAuth(),
     puppeteer: { 
-        executablePath: '/usr/bin/google-chrome',
         headless: true
     }
 });
