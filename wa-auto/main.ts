@@ -1,8 +1,10 @@
 import qrcode from 'qrcode-terminal';
-import { Client, LocalAuth } from 'whatsapp-web.js';
+import { Client, LocalAuth, NoAuth } from 'whatsapp-web.js';
+
+require('dotenv').config()
 
 const client = new Client({
-    authStrategy: new LocalAuth(),
+    authStrategy: process.env.LOCAL_AUTH ? new LocalAuth() : new NoAuth(),
     puppeteer: { 
         headless: true
     }
