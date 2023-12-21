@@ -9,6 +9,7 @@
     "dotenv": "^16.3.1"
   },
   "scripts": {
-    "dev": "npx nodemon src/main.js"
+    "dev": "npx nodemon src/main.js",
+    "start": "node src/main.js"
   }
 }
